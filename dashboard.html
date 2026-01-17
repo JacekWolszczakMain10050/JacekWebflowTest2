@@ -1,0 +1,945 @@
+<!DOCTYPE html><!--  Last Published: Sat Jan 17 2026 08:55:35 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="681fb187d42d54a9b77499be" data-wf-site="67989510a3220632c0db2ca0" lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <meta content="Dashboard" property="og:title">
+  <meta content="Dashboard" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="198HuaZTm-nN8QLZWRtskr8xLIiwdyhugU-HYvbvtWI" name="google-site-verification">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/webwebwebsite.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Outfit:200,300,regular,500,600,700,800"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XW4WJZQH1E"></script>
+  <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('set', 'developer_id.dZGVlNj', true);gtag('js', new Date());gtag('config', 'G-XW4WJZQH1E');</script>
+  <script type="text/javascript">!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.agent='plwebflow';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('consent', 'revoke');fbq('init', '1049921296821003');fbq('track', 'PageView');</script>
+  <style>
+/* Preloader - wymuszenie wyświetlenia jako pierwszy */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000; /* czarny kolor tła */
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+/* Stan ukrycia preloadera */
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* Alternatywnie - całkowite usunięcie z DOM */
+.preloader.remove {
+  display: none !important;
+}
+/* Zapobieganie przewijaniu podczas preloadera */
+body.preloader-active {
+  overflow: hidden;
+  height: 100vh;
+}
+</style>
+  <!--  Google Tag Manager  -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TF5L9SQ9');</script>
+  <!--  End Google Tag Manager  -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
+</head>
+<body class="body-8">
+  <div class="preloader">
+    <div class="grain-wrapper">
+      <div class="grain in-element"></div>
+    </div>
+    <div class="preloader-content">
+      <div class="subtitle">Loading</div>
+      <div class="preloader-outline-circle">
+        <div id="w-node-_0fe6b6d1-42c3-5bb0-df7b-b5d9b5ef71a3-b5ef719c" class="preloader-outline-wrapper top">
+          <div class="preloader-outline"></div>
+        </div>
+        <div id="w-node-_0fe6b6d1-42c3-5bb0-df7b-b5d9b5ef71a5-b5ef719c" class="preloader-outline-wrapper bottom">
+          <div class="preloader-outline bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-collapse="none" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+    <div data-w-id="38b722e5-62ca-4f16-7c3c-06a6618c8bd2" class="full-screen-menu">
+      <div class="menu-content">
+        <div id="w-node-_38b722e5-62ca-4f16-7c3c-06a6618c8bd5-618c8bd1" data-w-id="38b722e5-62ca-4f16-7c3c-06a6618c8bd5" class="menu-items">
+          <div data-w-id="38b722e5-62ca-4f16-7c3c-06a6618c8bd6" class="menu-wrapper">
+            <a id="out" href="index.html" data-hover="" data-click="" class="menu-link w-inline-block">
+              <div class="title">
+                <div>Główna</div>
+              </div>
+            </a>
+            <a id="out" href="miro.html" data-hover="" data-click="" class="menu-link w-inline-block">
+              <div class="title">
+                <div>O mnie</div>
+              </div>
+            </a>
+            <a id="out" href="kalkulator.html" data-hover="" data-click="" class="menu-link w-inline-block">
+              <div class="title">
+                <div>Kalkulator</div>
+              </div>
+            </a>
+            <a id="out" href="blog.html" data-hover="" data-click="" class="menu-link w-inline-block">
+              <div id="w-node-_38b722e5-62ca-4f16-7c3c-06a6618c8be4-618c8bd1" class="title">
+                <div>Blog</div>
+              </div>
+            </a>
+            <a id="out" href="case-study.html" data-hover="" data-click="" class="menu-link w-node-_38b722e5-62ca-4f16-7c3c-06a6618c8be7-618c8bd1 w-inline-block">
+              <div class="title">
+                <div>CaseStudy</div>
+              </div>
+            </a>
+            <a id="out" href="umow-spotkanie.html" data-hover="" data-click="" class="menu-link w-node-_38b722e5-62ca-4f16-7c3c-06a6618c8beb-618c8bd1 w-inline-block">
+              <div class="title">
+                <div>Spotkanie Online</div>
+              </div>
+            </a>
+            <a id="out" href="https://webwebwebsite.webflow.io/logowanie" data-click="" data-hover="" class="menu-link w-node-_38b722e5-62ca-4f16-7c3c-06a6618c8bef-618c8bd1 w-inline-block">
+              <div class="title">
+                <div>Zaloguj się</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="menu-center">
+          <div class="menu-pin"></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-wrapper zero-height">
+      <div id="w-node-_38b722e5-62ca-4f16-7c3c-06a6618c8bfe-618c8bd1" class="navbar-wrapper">
+        <a href="#" data-click="" data-hover="" class="reel-link w-inline-block w-lightbox">
+          <div id="w-node-_38b722e5-62ca-4f16-7c3c-06a6618c8c00-618c8bd1" class="dot"></div>
+          <div class="nav-text">Czym jest Webflow?</div>
+          <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "url": "https://www.youtube.com/watch?v=pLgPFfFdpDs",
+      "originalUrl": "https://www.youtube.com/watch?v=pLgPFfFdpDs",
+      "width": 940,
+      "height": 528,
+      "thumbnailUrl": "https://i.ytimg.com/vi/pLgPFfFdpDs/hqdefault.jpg",
+      "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FpLgPFfFdpDs%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DpLgPFfFdpDs&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FpLgPFfFdpDs%2Fhqdefault.jpg&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
+      "type": "video"
+    }
+  ],
+  "group": ""
+}</script>
+        </a>
+        <a href="index.html" data-click="" data-hover="" id="w-node-_38b722e5-62ca-4f16-7c3c-06a6618c8c03-618c8bd1" class="brand w-nav-brand">
+          <div>WEBWEB</div>
+        </a>
+        <nav role="navigation" class="nav-menu w-nav-menu">
+          <a href="#" class="nav-link w-nav-link">Home</a>
+        </nav>
+        <div class="w-nav-button">
+          <div class="w-icon-nav-menu"></div>
+        </div>
+        <div data-hover="" id="w-node-_38b722e5-62ca-4f16-7c3c-06a6618c8c0b-618c8bd1" class="nav-right">
+          <div class="page-title">
+            <div class="nav-text">Menu</div>
+          </div>
+          <div class="light-separator dot"></div>
+          <div data-click="" data-w-id="38b722e5-62ca-4f16-7c3c-06a6618c8c10" class="menu-button">
+            <div data-is-ix2-target="1" class="lottie-animation" data-w-id="38b722e5-62ca-4f16-7c3c-06a6618c8c11" data-animation-type="lottie" data-src="https://cdn.prod.website-files.com/689a09fa2e0921f9977de6ea/689a09fb2e0921f9977de756_Menu-nav.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="2.875" data-duration="0" data-ix2-initial-state="0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="spacer">
+    <div class="spacer-2"><img src="images/Vectors-Wrapper.svg" loading="lazy" alt="" height="100" class="vectors-wrapper-6"></div>
+  </div>
+  <main class="main_wrapper">
+    <div class="container">
+      <div class="wrapper-section">
+        <div class="padding-section main">
+          <div class="text-14">
+            <div class="text-14"><span class="_0_informacje-3">1_</span><span class="_0_informacje-2">Panel Użytkownika</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="container">
+      <div class="wrapper-section">
+        <div class="container-lg">
+          <div data-current="Tab 5" data-easing="ease" data-duration-in="300" data-duration-out="100" class="tabs w-tabs">
+            <div class="tabs-menu w-tab-menu">
+              <a data-w-tab="Tab 1" data-click="" id="w-node-c9d22cf7-c485-d63c-3645-4ac2966196aa-b77499be" class="tab-styl w-inline-block w-tab-link">
+                <div class="text-block-11 black-text">00</div>
+                <div class="text-block-14">Dashboard</div>
+              </a>
+              <a data-w-tab="Tab 2" data-click="" class="tab-styl orange w-inline-block w-tab-link">
+                <div class="text-block-11">01</div>
+                <div class="text-block-15">Informacje</div>
+              </a>
+              <a data-w-tab="Tab 3" data-click="" class="tab-styl purple w-inline-block w-tab-link">
+                <div class="text-block-11">02</div>
+                <div class="text-block-16">Materiały</div>
+              </a>
+              <a data-w-tab="Tab 4" data-click="" class="tab-styl blue w-inline-block w-tab-link">
+                <div class="text-block-11">03</div>
+                <div class="text-block-16">Edukacja</div>
+              </a>
+              <a data-w-tab="Tab 5" data-click="" class="tab-styl green w-inline-block w-tab-link w--current">
+                <div class="text-block-11">04</div>
+                <div class="text-block-16">Ustawienia</div>
+              </a>
+              <a data-w-tab="Tab 6" data-click="" data-ms-action="logout" class="tab-styl red w-inline-block w-tab-link">
+                <div class="text-block-11">05</div>
+                <div class="text-block-16">Wyloguj się</div>
+              </a>
+            </div>
+            <div class="tabs-content w-tab-content">
+              <div data-w-tab="Tab 1" class="w-tab-pane">
+                <div class="div-block-141">
+                  <div class="text-23 _2rem">
+                    <div class="text-23"><span class="_0_informacje-5">2_</span><span class="_0_informacje-2">Dashboard</span></div>
+                  </div>
+                </div>
+                <div class="spacer-small">
+                  <div class="spacer-2 small-spacer"><img width="1376.0057373046875" height="100" alt="" src="images/Vectors-Wrapper.svg" loading="lazy" class="vectors-wrapper-6 small"></div>
+                </div>
+              </div>
+              <div data-w-tab="Tab 2" class="tab-pane-tab-2 w-tab-pane">
+                <div class="div-block-112">
+                  <div class="text-27 _2rem">
+                    <div class="text-27"><span class="_0_informacje-7">2_</span><span class="_0_informacje-2">Informacje</span></div>
+                  </div>
+                </div>
+                <div class="spacer-small">
+                  <div class="spacer-2 small-spacer"><img width="1376.0057373046875" height="100" alt="" src="images/Vectors-Wrapper.svg" loading="lazy" class="vectors-wrapper-15 small"></div>
+                </div>
+                <div class="service-tab-wrapper">
+                  <div class="service-pane-item-2-1">
+                    <div class="service-pane-item-master">
+                      <h4 class="service-item-title">Poradnik 1</h4>
+                      <div class="service-item-text">Koszt i plany Webflow<br></div>
+                      <div class="rich-text-block w-richtext">
+                        <p>Koszt i plany Webflow zależą od wybranego pakietu, który odpowiada Twoim potrzebom i wymaganiom projektu. Webflow oferuje różne plany, które można podzielić na dwie główne kategorie: plany dla stron (Site Plans) oraz plany dla zespołów (Account Plans).</p><strong class="bold-text-34">Pro</strong><strong class="bold-text-35">Team</strong>
+                        <h3 class="heading-24">Plany dla stron (Site Plans):</h3>
+                        <ol role="list" class="list-12">
+                          <li><strong class="bold-text-39">Basic</strong>: Idealny dla osobistych projektów i prostych stron internetowych. Oferuje podstawowe funkcje, takie jak hosting i możliwość podpięcia własnej domeny.</li>
+                          <li><strong class="bold-text-39">CMS</strong>: Przeznaczony dla stron, które wymagają zarządzania treścią. Oferuje dodatkowe funkcje, takie jak możliwość dodawania blogów czy dynamicznych treści.</li>
+                          <li><strong class="bold-text-39">Business</strong>: Dla bardziej zaawansowanych projektów potrzebujących lepszej wydajności. Oferuje więcej miejsca na przechowywanie danych, a także dodatkowe funkcje SEO i integracje.</li>
+                          <li><strong class="bold-text-39">Enterprise</strong>: Stworzony dla dużych firm z indywidualnymi potrzebami. Oferuje pełną personalizację, wyższy poziom wsparcia oraz rozbudowane funkcje bezpieczeństwa.</li>
+                        </ol>
+                        <h3 class="heading-25">Plany dla zespołów (Account Plans):</h3>
+                        <ol role="list" class="list-12">
+                          <li class="list-item"><strong class="bold-text-39">Starter</strong>: Dla osób, które dopiero zaczynają swoją przygodę z Webflow. Oferuje podstawowe funkcje i ograniczone opcje.</li>
+                          <li>: Idealny dla freelancerów i małych zespołów, oferuje więcej projektów, brakuje ograniczeń związanych z hostingiem.</li>
+                          <li>: Dla większych zespołów pracujących razem nad projektami. Oferuje dodatkowe narzędzia do współpracy oraz możliwość zarządzania użytkownikami.</li>
+                        </ol>
+                        <p class="text-white">Ceny za pakiety mogą się różnić w zależności od wybranych opcji i mogą zmieniać się w czasie. Zaleca się odwiedzenie oficjalnej strony Webflow, aby uzyskać najbardziej aktualne informacje na temat cen i dostępnych opcji.</p>
+                        <p class="text-white">Warto również zauważyć, że Webflow oferuje darmowy plan, który pozwala na stworzenie i przetestowanie strony, jednak funkcjonalność jest ograniczona. Aby korzystać z zaawansowanych opcji, takich jak podpięcie własnej domeny, konieczne będzie wykupienie jednego z płatnych planów.</p>
+                        <p>‍</p>
+                      </div>
+                      <a href="https://webflow.com/pricing" target="_blank" class="link_profil animacja-kursor">Zapoznaj się z kosztami</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="service-tab-wrapper">
+                  <div class="service-pane-item-3-1">
+                    <div class="service-pane-item-master">
+                      <h4 class="service-item-title">Poradnik 2</h4>
+                      <div class="service-item-text">Dodatkowe Informacje<br></div>
+                      <div class="rich-text-block w-richtext">
+                        <p class="text-white">Webflow University to platforma edukacyjna stworzona przez zespół Webflow, oferująca szereg bezpłatnych kursów, tutoriali i zasobów, które pomagają użytkownikom nauczyć się skutecznie korzystać z narzędzi Webflow. Jest to idealne miejsce dla osób na każdym poziomie zaawansowania, od całkowitych nowicjuszy po zaawansowanych użytkowników, którzy chcą poszerzyć swoją wiedzę z zakresu projektowania stron internetowych, rozwoju i SEO.</p>
+                        <p class="text-white">Platforma edukacyjna oferuje różnorodne tematy, takie jak podstawy budowania strony, projektowanie układów, animacje, korzystanie z systemu zarządzania treścią Webflow, budowanie stron e-commerce oraz optymalizacja pod kątem wyszukiwarek. Użytkownicy mogą również zdobywać oficjalne certyfikaty Webflow, które można dodać do swojego portfolio, CV czy profilu LinkedIn po pomyślnym ukończeniu kursów.</p>
+                        <p class="text-white">Webflow University dostarcza nie tylko wiedzy teoretycznej, ale także praktycznych umiejętności, umożliwiając użytkownikom klonowanie przykładów i eksperymentowanie z różnymi elementami, co przekłada się na aktywne uczenie się. Całe zasoby dostępne na platformie są całkowicie darmowe, a użytkownicy potrzebują jedynie darmowego konta Webflow, aby rozpocząć naukę.</p>
+                        <p class="text-white">Jest to doskonałe miejsce dla każdego, kto chce poprawić swoje umiejętności w zakresie projektowania stron internetowych i uzyskać wszechstronną wiedzę na temat funkcji oferowanych przez Webflow</p>
+                        <p>‍</p>
+                      </div>
+                      <a href="https://university.webflow.com/" target="_blank" class="link_profil animacja-kursor">Sprawdź</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-w-tab="Tab 3" class="w-tab-pane">
+                <div class="div-block-112">
+                  <div class="text-27 _2rem">
+                    <div class="text-27"><span class="_0_informacje-7">2_</span><span class="_0_informacje-2">MATERIAŁY</span></div>
+                  </div>
+                </div>
+                <div class="spacer-small">
+                  <div class="spacer-2 small-spacer"><img width="1376.0057373046875" height="100" alt="" src="images/Vectors-Wrapper.svg" loading="lazy" class="vectors-wrapper-15 small"></div>
+                </div>
+              </div>
+              <div data-w-tab="Tab 4" class="w-tab-pane">
+                <div class="div-block-112">
+                  <div class="text-27 _2rem">
+                    <div class="text-27"><span class="_0_informacje-7">2_</span><span class="_0_informacje-2">Edukacja</span></div>
+                  </div>
+                </div>
+                <div class="spacer-small">
+                  <div class="spacer-2 small-spacer"><img width="1376.0057373046875" height="100" alt="" src="images/Vectors-Wrapper.svg" loading="lazy" class="vectors-wrapper-15 small"></div>
+                </div>
+                <div>
+                  <div class="div-block-122">
+                    <div>
+                      <div class="div-block-123">
+                        <h2 class="heading-23">Edycja treści dla klienta - edytor mode</h2>
+                      </div>
+                      <div id="video-wrapper" class="video-wrapper">
+                        <div class="autoplay-code w-embed w-script">
+                          <script>
+// this script will autoplay video on click to avoid two clicks
+document.addEventListener("DOMContentLoaded", function () {
+  const VIDEO_WRAPPER = document.getElementById("video-wrapper"); 
+  const VIDEO_EMBED = document.getElementById("video-embed");
+  VIDEO_WRAPPER.addEventListener("click", () => {
+    const IFRAME = VIDEO_EMBED.getElementsByTagName("iframe")[0];
+    const VIDEO_SOURCE = IFRAME.src;
+    if (VIDEO_SOURCE.includes("autoplay=0")) {
+      IFRAME.src = VIDEO_SOURCE.replace("autoplay=0", "autoplay=1");
+    } else {
+      IFRAME.src = VIDEO_SOURCE + "&autoplay=1";
+    }
+  });
+});
+</script>
+                        </div>
+                        <div title="Play Video" class="video-thumbnail"><img sizes="100vw" srcset="images/104222_1104222.webp 500w, images/104222_1104222.webp 800w, images/104222_1104222.webp 1000w" alt="Triangle behind a mountain range made with structural grid like texture" src="images/104222_1104222.webp" loading="lazy" class="thumbnail">
+                          <div class="play-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                              <path class="stroke-solid" fill="none" stroke="currentColor" d="M49.9 2.5C23.6 2.8 2.1 24.4 2.5 50.4 2.9 76.5 24.7 98 50.3 97.5c26.4-.6 47.4-21.8 47.2-47.7-.2-26.1-21.8-47.5-47.6-47.3"></path>
+                              <path class="stroke-dotted" fill="none" stroke="currentColor" d="M49.9 2.5C23.6 2.8 2.1 24.4 2.5 50.4 2.9 76.5 24.7 98 50.3 97.5c26.4-.6 47.4-21.8 47.2-47.7-.2-26.1-21.8-47.5-47.6-47.3"></path>
+                              <path class="icon" fill="currentColor" d="M38 69c-1 .5-1.8 0-1.8-1.1V32.1c0-1.1.8-1.6 1.8-1.1l34 18c1 .5 1 1.4 0 1.9L38 69z"></path>
+                            </svg>
+                            <style>
+.stroke-dotted {
+    opacity: 0;
+    stroke-dasharray: 1,3.14;
+    stroke-width: .0625rem;
+    transform-origin: 50% 50%;
+    -webkit-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+    transition: opacity 1s ease, stroke-width 1s ease
+}
+.stroke-solid {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 300;
+    stroke-width: .1875rem;
+    transition: stroke-dashoffset 1s ease, opacity 1s ease
+}
+.icon {
+    transform-origin: 50% 50%;
+    transition: transform .3s ease-out
+}
+.video-thumbnail:hover .stroke-dotted {
+    stroke-width: .25rem;
+    opacity: 1
+}
+.video-thumbnail:hover .stroke-solid {
+    opacity: 0;
+    stroke-dashoffset: 300
+}
+.video-thumbnail:hover .icon {
+    transform: scale(1.1)
+}
+.video-thumbnail:hover .thumbnail {
+    opacity: .7;
+    transform: scale(1.1)
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+</style>
+                          </div>
+                        </div>
+                        <div id="video-embed" style="padding-top:56.17021276595745%" class="w-embed-youtubevideo video-embed"><iframe src="https://www.youtube-nocookie.com/embed/83_iCvQeBes?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen="" title="Introducing edit mode: Seamless editing in the Webflow Designer"></iframe></div>
+                      </div>
+                      <div class="service-pane-item-master">
+                        <h4 class="service-item-title">Poradnik 1</h4>
+                        <div class="service-item-text">Edycja treści dla klienta - edytor mode<br></div>
+                        <div class="rich-text-block w-richtext">
+                          <p class="paragraph-18"><strong class="bold-text-54">Edytor trybu edycji (Editor Mode) w Webflow to funkcjonalność, która umożliwia klientom lub współpracownikom łatwe edytowanie treści strony internetowej bez konieczności korzystania z pełnego interfejsu projektanta. Oto kilka kluczowych cech Edytora:</strong></p>
+                          <ol role="list" class="list-11">
+                            <li><strong class="bold-text-41">Prosta edycja treści</strong>: Klienci mogą edytować teksty, obrazy i inne elementy bezpośrednio na stronie. Po przełączeniu do trybu edytora wystarczy kliknąć na element, który chcą zmienić, a następnie wprowadzić zmiany.</li>
+                            <li><strong class="bold-text-41">Intuicyjny interfejs</strong>: Edytor jest zaprojektowany z myślą o osobach, które nie mają technicznego doświadczenia. Interfejs jest przyjazny dla użytkownika, co ułatwia nawigację i edycję treści.</li>
+                            <li><strong class="bold-text-41">Podgląd zmian na żywo</strong>: Klienci mogą zobaczyć, jak ich zmiany będą wyglądały na stronie w czasie rzeczywistym, co pozwala na dokładniejsze dostosowanie treści i stylu.</li>
+                            <li><strong class="bold-text-41">Ograniczone uprawnienia</strong>: Właściciel strony ma możliwość konfigurowania uprawnień dla różnych użytkowników, co pozwala na kontrolowanie, kto może edytować konkretne elementy strony.</li>
+                            <li><strong class="bold-text-41">Brak potrzeby kodowania</strong>: Klienci nie muszą znać HTML, CSS ani JavaScript, aby móc wprowadzać zmiany w swoim projekcie. Edytor zapewnia wszystkie potrzebne narzędzia w sposób wizualny.</li>
+                            <li><strong class="bold-text-41">Możliwość publikacji</strong>: Po zakończeniu edycji klienci mogą w prosty sposób opublikować swoje zmiany, co pozwala na szybkie aktualizacje treści strony.</li>
+                          </ol>
+                          <p>Ogólnie rzecz biorąc, Edytor w Webflow to doskonałe narzędzie dla klientów, którzy chcą zarządzać treścią swojej strony internetowej w prosty i efektywny sposób, bez potrzeby zaawansowanej wiedzy technologicznej.</p>
+                          <p>‍</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="div-block-123">
+                        <h2 class="heading-23">Wyeksportowanie kodu</h2>
+                      </div>
+                      <div id="video-wrapper" data-w-id="c9d22cf7-c485-d63c-3645-4ac29661977a" class="video-wrapper">
+                        <div class="autoplay-code w-embed w-script">
+                          <script>
+// this script will autoplay video on click to avoid two clicks
+document.addEventListener("DOMContentLoaded", function () {
+  const VIDEO_WRAPPER = document.getElementById("video-wrapper"); 
+  const VIDEO_EMBED = document.getElementById("video-embed");
+  VIDEO_WRAPPER.addEventListener("click", () => {
+    const IFRAME = VIDEO_EMBED.getElementsByTagName("iframe")[0];
+    const VIDEO_SOURCE = IFRAME.src;
+    if (VIDEO_SOURCE.includes("autoplay=0")) {
+      IFRAME.src = VIDEO_SOURCE.replace("autoplay=0", "autoplay=1");
+    } else {
+      IFRAME.src = VIDEO_SOURCE + "&autoplay=1";
+    }
+  });
+});
+</script>
+                        </div>
+                        <div title="Play Video" class="video-thumbnail"><img sizes="100vw" srcset="images/110815_1110815.webp 500w, images/110815_1110815.webp 800w, images/110815_1110815.webp 1000w" alt="Triangle behind a mountain range made with structural grid like texture" src="images/110815_1110815.webp" loading="lazy" class="thumbnail">
+                          <div class="play-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                              <path class="stroke-solid" fill="none" stroke="currentColor" d="M49.9 2.5C23.6 2.8 2.1 24.4 2.5 50.4 2.9 76.5 24.7 98 50.3 97.5c26.4-.6 47.4-21.8 47.2-47.7-.2-26.1-21.8-47.5-47.6-47.3"></path>
+                              <path class="stroke-dotted" fill="none" stroke="currentColor" d="M49.9 2.5C23.6 2.8 2.1 24.4 2.5 50.4 2.9 76.5 24.7 98 50.3 97.5c26.4-.6 47.4-21.8 47.2-47.7-.2-26.1-21.8-47.5-47.6-47.3"></path>
+                              <path class="icon" fill="currentColor" d="M38 69c-1 .5-1.8 0-1.8-1.1V32.1c0-1.1.8-1.6 1.8-1.1l34 18c1 .5 1 1.4 0 1.9L38 69z"></path>
+                            </svg>
+                            <style>
+.stroke-dotted {
+    opacity: 0;
+    stroke-dasharray: 1,3.14;
+    stroke-width: .0625rem;
+    transform-origin: 50% 50%;
+    -webkit-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+    transition: opacity 1s ease, stroke-width 1s ease
+}
+.stroke-solid {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 300;
+    stroke-width: .1875rem;
+    transition: stroke-dashoffset 1s ease, opacity 1s ease
+}
+.icon {
+    transform-origin: 50% 50%;
+    transition: transform .3s ease-out
+}
+.video-thumbnail:hover .stroke-dotted {
+    stroke-width: .25rem;
+    opacity: 1
+}
+.video-thumbnail:hover .stroke-solid {
+    opacity: 0;
+    stroke-dashoffset: 300
+}
+.video-thumbnail:hover .icon {
+    transform: scale(1.1)
+}
+.video-thumbnail:hover .thumbnail {
+    opacity: .7;
+    transform: scale(1.1)
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+</style>
+                          </div>
+                        </div>
+                        <div id="video-embed" style="padding-top:56.17021276595745%" class="w-embed-youtubevideo video-embed"><iframe src="https://www.youtube-nocookie.com/embed/eGzBXZqgD1s?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen="" title="How to export Webflow code and host it online"></iframe></div>
+                      </div>
+                      <div class="service-pane-item-master">
+                        <h4 class="service-item-title">Poradnik 2</h4>
+                        <div class="service-item-text">Wyeksportowanie kodu:<br></div>
+                        <div class="rich-text-block w-richtext">
+                          <p class="paragraph-18">Webflow pozwala na wyeksportowanie kodu projektu w celu dalszej pracy poza platformą. Aby wyeksportować kod z Webflow, należy postępować zgodnie z poniższymi krokami:</p>
+                          <ol role="list" class="list-12">
+                            <li>Zaloguj się do swojego konta Webflow i wybierz projekt, z którego chcesz wyeksportować kod.</li>
+                            <li>Przejdź do sekcji ustawień projektu, zazwyczaj znajdującej się w prawym górnym rogu panelu nawigacyjnego.</li>
+                            <li>W ustawieniach projektu, znajdź opcję &quot;Export Code&quot; lub podobnie zatytułowaną.</li>
+                            <li>Kliknij na opcję &quot;Export Code&quot; i poczekaj, aż Webflow przygotuje pliki zawierające kod Twojego projektu.</li>
+                            <li>Gdy proces wyeksportowywania zostanie zakończony, możesz pobrać pliki ZIP zawierające kod HTML, CSS oraz JavaScript Twojego projektu.</li>
+                            <li>Po pobraniu plików możesz je otworzyć w dowolnym edytorze kodu, takim jak Visual Studio Code, aby edytować projekt poza platformą Webflow.</li>
+                          </ol>
+                          <p>Pamiętaj, że po wyeksportowaniu kodu z Webflow stracisz możliwość dalszej edycji projektu w środowisku Webflow, dlatego zalecamy zachowanie kopii zapasowej projektu przed przystąpieniem do eksportu kodu.</p>
+                          <p>‍</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="div-block-123">
+                        <h2 class="heading-23">Zakup domeny</h2>
+                      </div>
+                      <div id="video-wrapper" data-w-id="c9d22cf7-c485-d63c-3645-4ac29661979e" class="video-wrapper">
+                        <div class="autoplay-code w-embed w-script">
+                          <script>
+// this script will autoplay video on click to avoid two clicks
+document.addEventListener("DOMContentLoaded", function () {
+  const VIDEO_WRAPPER = document.getElementById("video-wrapper"); 
+  const VIDEO_EMBED = document.getElementById("video-embed");
+  VIDEO_WRAPPER.addEventListener("click", () => {
+    const IFRAME = VIDEO_EMBED.getElementsByTagName("iframe")[0];
+    const VIDEO_SOURCE = IFRAME.src;
+    if (VIDEO_SOURCE.includes("autoplay=0")) {
+      IFRAME.src = VIDEO_SOURCE.replace("autoplay=0", "autoplay=1");
+    } else {
+      IFRAME.src = VIDEO_SOURCE + "&autoplay=1";
+    }
+  });
+});
+</script>
+                        </div>
+                        <div title="Play Video" class="video-thumbnail"><img sizes="100vw" srcset="images/13614_113614.webp 500w, images/13614_113614.webp 800w, images/13614_113614.webp 1000w" alt="Triangle behind a mountain range made with structural grid like texture" src="images/13614_113614.webp" loading="lazy" class="thumbnail">
+                          <div class="play-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100">
+                              <path class="stroke-solid" fill="none" stroke="currentColor" d="M49.9 2.5C23.6 2.8 2.1 24.4 2.5 50.4 2.9 76.5 24.7 98 50.3 97.5c26.4-.6 47.4-21.8 47.2-47.7-.2-26.1-21.8-47.5-47.6-47.3"></path>
+                              <path class="stroke-dotted" fill="none" stroke="currentColor" d="M49.9 2.5C23.6 2.8 2.1 24.4 2.5 50.4 2.9 76.5 24.7 98 50.3 97.5c26.4-.6 47.4-21.8 47.2-47.7-.2-26.1-21.8-47.5-47.6-47.3"></path>
+                              <path class="icon" fill="currentColor" d="M38 69c-1 .5-1.8 0-1.8-1.1V32.1c0-1.1.8-1.6 1.8-1.1l34 18c1 .5 1 1.4 0 1.9L38 69z"></path>
+                            </svg>
+                            <style>
+.stroke-dotted {
+    opacity: 0;
+    stroke-dasharray: 1,3.14;
+    stroke-width: .0625rem;
+    transform-origin: 50% 50%;
+    -webkit-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+    transition: opacity 1s ease, stroke-width 1s ease
+}
+.stroke-solid {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 300;
+    stroke-width: .1875rem;
+    transition: stroke-dashoffset 1s ease, opacity 1s ease
+}
+.icon {
+    transform-origin: 50% 50%;
+    transition: transform .3s ease-out
+}
+.video-thumbnail:hover .stroke-dotted {
+    stroke-width: .25rem;
+    opacity: 1
+}
+.video-thumbnail:hover .stroke-solid {
+    opacity: 0;
+    stroke-dashoffset: 300
+}
+.video-thumbnail:hover .icon {
+    transform: scale(1.1)
+}
+.video-thumbnail:hover .thumbnail {
+    opacity: .7;
+    transform: scale(1.1)
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+</style>
+                          </div>
+                        </div>
+                        <div id="video-embed" style="padding-top:56.17021276595745%" class="w-embed-youtubevideo video-embed"><iframe src="https://www.youtube-nocookie.com/embed/juG4o0EOjH4?rel=0&amp;controls=1&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0" style="position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:auto" allow="autoplay; encrypted-media" allowfullscreen="" title="Connecting a custom domain with Domains Made Easy - Webflow tutorial (using the Old UI)"></iframe></div>
+                      </div>
+                      <div class="service-pane-item-master">
+                        <h4 class="service-item-title">Poradnik 3</h4>
+                        <div class="service-item-text">Zakup domeny<br></div>
+                        <div class="rich-text-block w-richtext"><strong class="bold-text-55">Wsparcie</strong>
+                          <p>Zakup domeny w Webflow to proces, który pozwala na łatwe połączenie Twojej strony internetowej z unikalnym adresem internetowym. Oto kroki oraz kluczowe informacje dotyczące zakupu domeny w Webflow:</p>
+                          <ol role="list" class="list-12">
+                            <li><strong class="bold-text-41">Wybór domeny</strong>: Pierwszym krokiem jest wybór odpowiedniej nazwy domeny, która najlepiej pasuje do Twojej marki lub projektu. Upewnij się, że jest ona łatwa do zapamiętania i związana z treścią Twojej strony.</li>
+                            <li><strong class="bold-text-41">Zakup poprzez Webflow</strong>: Webflow oferuje możliwość zakupu domeny bezpośrednio na swojej platformie. Dzięki temu możesz zarejestrować domenę i natychmiast powiązać ją z Twoim projektem.</li>
+                            <li><strong class="bold-text-41">Ustawienia DNS</strong>: Jeśli zdecydujesz się na zakup domeny zewnętrznej, będziesz musiał ręcznie skonfigurować ustawienia DNS, aby połączyć swoją domenę z witryną Webflow. Webflow dostarcza szczegółowe instrukcje, jak to zrobić.</li>
+                            <li><strong class="bold-text-41">SSL i bezpieczeństwo</strong>: Po zakupie domeny Webflow automatycznie konfiguruje certyfikat SSL, co zapewnia, że Twoja strona będzie bezpieczna dla odwiedzających. SSL jest istotny, aby chronić dane użytkowników oraz zwiększyć zaufanie do Twojej witryny.</li>
+                            <li><strong class="bold-text-41">Zarządzanie ustawieniami</strong>: Po zakupie domeny będziesz mieć dostęp do panelu zarządzania, gdzie możesz edytować ustawienia swojego domeny, takie jak przekierowania, subdomeny lub inne opcje.</li>
+                            <li>W przypadku jakichkolwiek problemów podczas procesu zakupu lub konfiguracji domeny, Webflow oferuje pomoc techniczną oraz dokumentację, która jest dostępna dla użytkowników.</li>
+                          </ol>
+                          <p>Zakup domeny w Webflow to prosty sposób na zbudowanie profesjonalnego wizerunku w Internecie. Dzięki łatwej integracji z platformą Webflow, możesz skupić się na tworzeniu treści i projektowaniu, mając pewność, że Twoja strona będzie dostępna pod spójnym adresem internetowym.</p>
+                          <p>‍</p>
+                          <p>‍</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-w-tab="Tab 5" class="w-tab-pane w--tab-active">
+                <div class="div-block-141">
+                  <div class="text-23 _2rem">
+                    <div class="text-23"><span class="_0_informacje-5">2_</span><span class="_0_informacje-2">USTAWIENIA</span></div>
+                  </div>
+                </div>
+                <div class="main-container-2">
+                  <div class="spacer-small">
+                    <div class="spacer-2 small-spacer"><img width="1376.0057373046875" height="100" alt="" src="images/Vectors-Wrapper.svg" loading="lazy" class="vectors-wrapper-6 small"></div>
+                    <div class="spacer-small">
+                      <div class="spacer-2 small-spacer"></div>
+                    </div>
+                    <div class="spacer-small">
+                      <div class="spacer-2 small-spacer"></div>
+                      <div class="spacer-small">
+                        <div class="spacer-2 small-spacer"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-form">
+                    <form id="wf-form-signup" name="wf-form-signup" data-name="signup" method="get" data-ms-form="profile" class="profile-form-container-2" data-wf-page-id="681fb187d42d54a9b77499be" data-wf-element-id="c9d22cf7-c485-d63c-3645-4ac2966197df">
+                      <h1 class="small-h1-2 white-text">Informacje Ogólne</h1>
+                      <div class="spacer-xs"></div>
+                      <div class="white-text">Skorzystaj z poniższego formularza, aby zaktualizować swój profil.</div>
+                      <div class="spacer-m"></div>
+                      <div class="flex-row-outer">
+                        <div class="input-wrapper _15p-right"><label for="First-Name" class="input-label">Imię</label><input class="input w-input" maxlength="256" name="First-Name-4" data-name="First Name 4" placeholder="" type="text" id="First-Name-4" data-ms-member="first-name" required=""></div>
+                        <div class="input-wrapper"><label for="Last-Name" class="input-label">Nazwisko</label><input class="input w-input" maxlength="256" name="Last-Name-4" data-name="Last Name 4" placeholder="" type="text" id="Last-Name-4" data-ms-member="last-name" required=""></div>
+                      </div>
+                      <div class="input-wrapper"><label for="Phone" class="input-label">Telefon</label><input class="input w-input" maxlength="256" name="Phone-2" data-name="Phone 2" placeholder="" type="text" id="Phone-2" data-ms-member="phone" required="">
+                        <div class="input-description">Zbieramy je na wypadek sytuacji awaryjnych.</div>
+                      </div>
+                      <div class="spacer-m"></div><input type="submit" data-wait="Please wait..." class="button-4 absolute w-button" value="Zapisz Profil">
+                    </form>
+                    <div class="w-form-done">
+                      <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail">
+                      <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                  </div>
+                  <div class="spacer-xl"></div>
+                  <div class="w-form">
+                    <form id="wf-form-signup" name="wf-form-signup" data-name="signup" method="get" data-ms-form="email" class="profile-form-container-2" data-wf-page-id="681fb187d42d54a9b77499be" data-wf-element-id="c9d22cf7-c485-d63c-3645-4ac2966197ff">
+                      <h1 class="small-h1-2 white-text">Adres Email</h1>
+                      <div class="spacer-xs"></div>
+                      <div class="text-block-16 white-text">Użyj tego formularza, aby zaktualizować swój adres e-mail.</div>
+                      <div class="spacer-m"></div>
+                      <div class="input-wrapper"><label for="Email" class="input-label">Email</label><input class="input w-input" maxlength="256" name="Email-2" data-name="Email 2" placeholder="" type="text" id="Email-2" data-ms-member="email" required="">
+                        <div class="input-description">Ten adres e-mail będzie potrzebny do zalogowania się.</div>
+                      </div><input type="submit" data-wait="Please wait..." class="button-4 absolute w-button" value="Zmień Email">
+                    </form>
+                    <div class="w-form-done">
+                      <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail">
+                      <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                  </div>
+                  <div class="spacer-xl"></div>
+                  <div class="w-form">
+                    <form id="wf-form-signup" name="wf-form-signup" data-name="signup" method="get" data-ms-form="password" class="profile-form-container-2" data-wf-page-id="681fb187d42d54a9b77499be" data-wf-element-id="c9d22cf7-c485-d63c-3645-4ac296619815">
+                      <h1 class="small-h1-2 white-text">Hasło</h1>
+                      <div class="spacer-xs"></div>
+                      <div class="text-block-18 white-text">Użyj tego formularza, aby zaktualizować hasło.</div>
+                      <div class="spacer-m"></div>
+                      <div class="input-wrapper"><label for="Email" class="input-label">Stare hasło</label><input class="input w-input" maxlength="256" name="Email-3" data-name="Email 3" placeholder="" type="text" id="Email-3" data-ms-member="current-password" required=""></div>
+                      <div class="input-wrapper"><label for="Email" class="input-label">Nowe hasło</label><input class="input w-input" maxlength="256" name="Email-2" data-name="Email 2" placeholder="" type="text" id="Email-2" data-ms-member="current-password" required="">
+                        <div class="description">Musi mieć co najmniej 8 znaków.</div>
+                      </div><input type="submit" data-wait="Please wait..." class="button-4 absolute w-button" value="Potwierdź Hasło">
+                    </form>
+                    <div class="w-form-done">
+                      <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail">
+                      <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="div-block-141">
+                  <div class="text-23 _2rem">
+                    <div class="text-23"><span class="_0_informacje-5">3_</span><span class="_0_informacje-2">Usuń konto</span></div>
+                  </div>
+                </div>
+                <div class="spacer-small">
+                  <div class="spacer-2 small-spacer"><img width="1376.0057373046875" height="100" alt="" src="images/Vectors-Wrapper.svg" loading="lazy" class="vectors-wrapper-25 small"></div>
+                  <div class="spacer-small">
+                    <div class="spacer-2 small-spacer"></div>
+                  </div>
+                </div>
+                <div class="div-block-117">
+                  <a data-w-id="c9d22cf7-c485-d63c-3645-4ac29661983a" href="#" class="button-4 absolute w-button">Usuń Konto</a>
+                </div>
+              </div>
+              <div data-w-tab="Tab 6" class="w-tab-pane"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="spacer">
+      <div class="spacer-2"><img src="images/Vectors-Wrapper.svg" loading="lazy" alt="" height="100" class="vectors-wrapper-6"></div>
+    </div>
+  </main>
+  <footer id="contact">
+    <div>
+      <footer class="section-233 padding-2 _5rem">
+        <div class="padding-section">
+          <div class="zlecenie">
+            <div text-fade-slide-left="" text-split="" class="text-14 left">
+              <div class="text-14"><span class="_0_informacje-3">1_</span><span class="_0_informacje-2">Footer</span></div>
+            </div>
+          </div>
+          <div class="frame-18"></div>
+        </div>
+        <div class="main_category_wrapp">
+          <div class="w-layout-grid grid-3 grid-footer-03">
+            <div id="w-node-d0969d6a-6125-4d83-61bf-69934f6b8df7-272b6a5e" class="footer-03-content">
+              <div class="footer-03-content-top">
+                <div class="sub_text">© WEBWEB.PL</div>
+                <div class="sub_text">2025</div>
+              </div>
+              <div class="footer-03-content-bottom">
+                <div class="footer-03-list-wrapper">
+                  <div id="w-node-d0969d6a-6125-4d83-61bf-69934f6b8dff-272b6a5e" class="footer-list light-7">
+                    <a data-hover="" data-click="" href="index.html" class="display-m button-text-2">Strona główna</a>
+                    <a data-hover="" data-click="" href="miro.html" class="display-m button-text-2">O mnie</a>
+                    <a data-hover="" data-click="" href="case-study.html" class="display-m button-text-2">Zlecenia</a>
+                    <a data-hover="" data-click="" href="umow-spotkanie.html" class="display-m button-text-2">Kontakt</a>
+                  </div>
+                  <div id="w-node-d0969d6a-6125-4d83-61bf-69934f6b8e0a-272b6a5e" class="footer-list light-7">
+                    <div class="display-m button-text-2">Media</div>
+                    <a data-hover="" data-click="" href="https://www.facebook.com/profile.php?id=61572548100134" class="display-m button-text-2">Facebook</a>
+                    <a data-hover="" data-click="" href="https://dribbble.com/JWlegion" class="display-m button-text-2">Dribble</a>
+                    <a data-hover="" data-click="" href="https://www.linkedin.com/in/jacek-wolszczak-44a187251/" class="display-m button-text-2">LinkedIn</a>
+                    <a data-hover="" data-click="" href="https://www.behance.net/JacekDesing-Webflow" class="display-m button-text-2">Behance</a>
+                  </div>
+                </div>
+                <div class="sub_text">Powered by Webflow</div>
+              </div>
+              <div class="pop-up-box">
+                <div class="pop-up-text-box">
+                  <p class="text-white">Zapisz się na mojego newslettera<br></p>
+                </div>
+                <div fs-formsubmit-enhance="true" fs-formsubmit-element="form" class="form-3 w-form">
+                  <form id="wf-form-Pop-Up-Form" name="wf-form-Pop-Up-Form" data-name="Pop Up Form" action="https://assets.mailerlite.com/jsonp/1024672/forms/145947261199713699/subscribe" method="post" class="pop-up-form" data-wf-page-id="681fb187d42d54a9b77499be" data-wf-element-id="d0969d6a-6125-4d83-61bf-69934f6b8e1d"><input class="pop-up-text-input w-input" maxlength="256" name="fields[email]" data-name="fields[email]" placeholder="Podaj swój email" data-hover="" type="email" id="fields[email]" required=""><label class="w-checkbox checkbox-field-3"><input type="checkbox" name="checkbox-2" id="checkbox-2" data-name="Checkbox 2" required="" class="w-checkbox-input checkbox-2" checked=""><span class="checkbox-label text-white w-form-label" for="checkbox-2">Akcpetuje regulamin i <a href="untitled.html" class="link-7">politykę strony</a></span></label><input type="submit" data-wait="Please wait..." data-click="" data-hover="" class="pop-up-button w-button" value="Subskrybuj"></form>
+                  <div class="pop-up-form-success w-form-done">
+                    <div class="text-block-37">Dziękujemy! Sprawdź swoją wiadomość e-mail, aby uzyskać potwierdzenie.</div>
+                  </div>
+                  <div class="popup-form-error w-form-fail">
+                    <div>Coś poszło nie tak, spróbuj jeszcze raz!!!</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="w-node-d0969d6a-6125-4d83-61bf-69934f6b8e2c-272b6a5e" class="component-grid-wrapper">
+              <a href="case-study.html" class="footer-03-image-scroller w-inline-block"><img width="320.5" sizes="(max-width: 479px) 100vw, 320.5px" alt="Strona internetowa z motywującym tekstem o treningu i aktywnym trybie życia, model w legginsach na drewnianej podłodze w jasnym pomieszczeniu." src="images/png_1.webp" loading="lazy" srcset="images/png_1png.webp 500w, images/png_1.webp 641w" class="footer-03-image-scroller-background">
+                <div class="footer-03-image-scroller-image-wrapper">
+                  <div class="footer-03-image-scroller-image-wrapper-column"><img width="674" sizes="(max-width: 767px) 100vw, 674px" alt="a screenshot of a website" src="images/sdsds_1.webp" loading="lazy" srcset="images/sdsds_1sdsds.webp 500w, images/sdsds_1sdsds.webp 800w, images/sdsds_1sdsds.webp 1080w, images/sdsds_1.webp 1348w" class="footer-03-image-scroller-image"><img width="484.5" sizes="(max-width: 767px) 100vw, 484.5px" alt="jhjkjkhhk" src="images/jhjkjkhhk.webp" loading="lazy" srcset="images/RNQDLEC-1.webp 500w, images/RNQDLEC-1.webp 800w, images/jhjkjkhhk.webp 969w" class="footer-03-image-scroller-image"><img width="353" sizes="(max-width: 479px) 100vw, 353px" alt="Strona sklepu z meblami ogrodowymi prezentująca zestawy wypoczynkowe na tle gór i tarasu oraz polecane produkty i opinie klientów." src="images/Group24_1.webp" loading="lazy" srcset="images/Group24_1Group24.webp 500w, images/Group24_1.webp 706w" class="footer-03-image-scroller-image"></div>
+                  <div class="footer-03-image-scroller-image-wrapper-column"><img sizes="(max-width: 970px) 100vw, 970px" srcset="images/Mai22n_1Mai22n.webp 500w, images/Mai22n_1Mai22n.webp 800w, images/Mai22n_1.webp 970w" alt="Mai22n" src="images/Mai22n_1.webp" loading="lazy" class="footer-03-image-scroller-image"><img sizes="(max-width: 921px) 100vw, 921px" srcset="images/4455_14455.webp 500w, images/4455_14455.webp 800w, images/4455_1.webp 921w" alt="4455" src="images/4455_1.webp" loading="lazy" class="footer-03-image-scroller-image"><img sizes="(max-width: 1439px) 100vw, 1440px" srcset="images/Player-nauka-wyjaśnienie_1Player-nauka-wyjaśnienie.webp 500w, images/Player-nauka-wyjaśnienie_1Player-nauka-wyjaśnienie.webp 800w, images/Player-nauka-wyjaśnienie_1Player-nauka-wyjaśnienie.webp 1080w, images/Player-nauka-wyjaśnienie_1.webp 1440w" alt="Ekran testu na prawo jazdy kategorii A z pytaniami i trzema odpowiedziami oraz opcją pokazania wyjaśnienia." src="images/Player-nauka-wyjaśnienie_1.webp" loading="lazy" class="footer-03-image-scroller-image"></div>
+                </div>
+                <div class="footer-03-image-scroller-overlay"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="div-block-150">
+        <div class="main_category_wrapp">
+          <div class="title-2 title-footer">
+            <h2 class="text-align-center black">Projektujemy w Figmie, ożywiamy w Webflow</h2>
+            <p data-text-pl="true" class="text-align-center black">Tworzę nowoczesne strony internetowe, które łączą przemyślany design z płynnym działaniem. Moja specjalizacja to kompleksowa obsługa projektów – od pierwszego szkicu w Figmie po w pełni funkcjonalną stronę w Webflow.</p>
+          </div>
+        </div>
+        <div class="main_category_wrapp"><img loading="lazy" src="images/WEBWEBPL.svg" alt="" class="image-12"></div>
+      </div>
+      <div class="div-block-151"><img src="images/Vectors-Wrapper.svg" loading="lazy" width="688" height="50" alt="" class="image-13"></div>
+    </div>
+  </footer>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67989510a3220632c0db2ca0" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script async="" data-cookieyes="cookieyes-analytics" src="https://www.googletagmanager.com/gtag/js?id=UA-144842869-1"></script>
+  <!--  Start cookieyes banner  -->
+  <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/05fdb523ab324e390692778f/script.js"></script> <!--  End cookieyes banner  -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+  <script>
+const lenis = new Lenis({ 
+duration: 1.5, 
+easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou 
+direction: 'vertical', // vertical, horizontal 
+gestureDirection: 'vertical', // vertical, horizontal, both 
+smooth: true, 
+mouseMultiplier: 1, 
+smoothTouch: false, 
+touchMultiplier: 2, 
+infinite: false, 
+}) 
+//get scroll value 
+lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => { console.log({ scroll, limit, velocity, direction, progress }) 
+}) 
+function raf(time) { 
+lenis.raf(time) 
+requestAnimationFrame(raf) 
+} 
+requestAnimationFrame(raf) 
+</script>
+  <script src="https://form.jotform.com/static/feedback2.js"></script>
+  <script>
+    var componentID = new JotformFeedback({
+  type: false,
+  width: 700,
+  height: 500,
+  fontColor: "#FFFFFF",
+  background: "#ff005c",
+  isCardForm: false,
+  formId: "250346501186048"
+  ,
+      buttonText: "Formularz kontaktowy",
+      buttonSide: "right",
+      buttonAlign: "top",
+      base: "https://form.jotform.com/",
+    }).componentID;
+  </script>
+  <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+  <script>window.jotformEmbedHandler("iframe[id='" + componentID + "_iframe']", "https://form.jotform.com/")</script>
+  <script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '66a63e20256cb7780dd512d9' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+  <style>
+.Button,
+.navbar-001_link,
+.Button-Inner,
+.logo.container,
+.table-row,
+.Border-Button,
+.Range.Slider,
+.product_link,
+.footer-cta-container,
+.Pop-Up.Text.Input,
+.Pop-Up.Button,
+.Checkbox.2,
+.Link.7,
+.footer-social-btm-parent,
+.footer-btm-left {
+  cursor: pointer;
+}
+</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+$(document).ready(function() {
+  let clickSound = new Howl({
+    src: ["https://cdn.jsdelivr.net/gh/JacekWolszczak/Jacek/interface-3-277552.mp3"],
+     volume: 0.5
+  });
+  let hoverSound = new Howl({
+    src: ["https://cdn.jsdelivr.net/gh/JacekWolszczak/Jacek/interface-button-154180.mp3"],
+     volume: 0.5
+  });
+  // Start playing bg sound on click
+  $("#start").on("click", function () {
+    sound.play();
+  });
+  // Toggle mute/unmute functionality on click
+  $("#sound").on("click", function () {
+    $(this).toggleClass("muted");
+    if ($(this).hasClass("muted")) {
+      Howler.mute(true);
+    } else {
+      Howler.mute(false);
+    }
+  });
+  // Play click sound 
+  $("[data-click]").on("click", function () {
+    clickSound.play();
+  });
+  // Play hover sound 
+  $("[data-hover]").on("mouseenter", function () {
+    hoverSound.play();
+  });
+ // Pause hover sound when mouse leaves elements with the data-hover attribute
+ // $("[data-hover]").on("mouseleave", function () {
+ //  hoverSound.pause();
+ // });
+});
+</script>
+  <!--  Google Tag Manager (noscript)  -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF5L9SQ9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!--  End Google Tag Manager (noscript)  -->
+  <style>
+#out {
+  color: rgba(255, 255, 255, 0);
+	-webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  #out {
+  color: rgba(255, 255, 255, 0);
+	-webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+.w-slider-nav.w-round>div {
+height: 12px;
+width: 36px;
+-webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1;
+-webkit-transition: all 600ms cubic-bezier(.25, .46, .45, .94);transition: all 600ms cubic-bezier(.25, .46, .45, .94);
+}
+</style>
+  <style>
+.w-slider-dot {
+background: none;
+border: 2px solid rgba(255, 255, 255, 0.1);
+border-radius: 100%;
+-webkit-transition: all 600ms cubic-bezier(.25, .46, .45, .94);transition: all 600ms cubic-bezier(.25, .46, .45, .94);
+} 
+.w-slider-dot.w-active {
+background: none;
+border: 2px solid white;
+-webkit-transition: all 600ms cubic-bezier(.25, .46, .45, .94);transition: all 600ms cubic-bezier(.25, .46, .45, .94);
+} 
+</style>
+  <!--  MailerLite Universal  -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1024672');
+</script>
+  <!--  End MailerLite Universal  -->
+  <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+  <script>
+  // Initialize Lenis
+  const lenis = new Lenis({
+    autoRaf: true,
+  });
+</script>
+  <script>
+  const letters = "aiouwz"
+document.querySelectorAll('[data-text-pl="true"]').forEach(el => {
+    el.innerHTML = el.innerHTML
+    .replace(RegExp(`(\\s)([${letters}])(\\s)([${letters}])(\\s)`, "gi"), "$1$2&nbsp;$4&nbsp;")
+    .replace(RegExp(`(\\s)([${letters}])(\\s)`, "gi"), "$1$2&nbsp;");
+});
+</script>
+</body>
+</html>
